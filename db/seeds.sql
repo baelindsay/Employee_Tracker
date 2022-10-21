@@ -1,12 +1,12 @@
 -- DEPARTMENT SEEDS -----
-INSERT INTO departments (department_name)
+INSERT INTO department (department_name)
 VALUES  ('Management'),
         ('The Fashion Design Department'),
         ('Product Development'),
         ('Styling');
 
 -- ROLE SEEDS -------
-INSERT INTO roles (title, salary, department_id)
+INSERT INTO role (title, salary, department_id)
 VALUES  ('Account manager', 58584, 1),
         ('Stylist', 33463, 4),
         ('Fashion designer', 42017, 2),
@@ -17,7 +17,7 @@ VALUES  ('Account manager', 58584, 1),
         ('Technical designer', 63874, 3);
 
 -- EMPLOYEE SEEDS -------
-INSERT INTO employees (first_name, last_name, role_id, manager_id)
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES  ('Cindy', 'Miller',     1,  null),
         ('Xaviar', 'Sanders',   2,  null),
         ('Tom', 'Holland',      3,  null),
@@ -27,3 +27,4 @@ VALUES  ('Cindy', 'Miller',     1,  null),
         ('Celine', 'Takahashi', 7,  2),
         ('Rebekah', 'Kim',      8,  3);
 
+UPDATE `employee_db.`employee` SET `manager_id` = '1' WHERE (`id` > '1');
