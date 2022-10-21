@@ -27,4 +27,4 @@ VALUES  ('Cindy', 'Miller',     1,  null),
         ('Celine', 'Takahashi', 7,  2),
         ('Rebekah', 'Kim',      8,  3);
 
-UPDATE `employee_db.`employee` SET `manager_id` = '1' WHERE (`id` > '1');
+UPDATE `employee_db`.`employee` SET `manager_id` = '1' WHERE (`id` > '1');
