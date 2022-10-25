@@ -1,7 +1,26 @@
 {
+  "name": "employee_tracker",
+  "version": "1.0.0",
+  "description": "A command-line application for managing a business's employees using Node, Inquirer, & MySQL.",
+  "main": "server.js",
   "dependencies": {
     "console.table": "^0.10.0",
     "inquirer": "^8.2.4",
     "mysql2": "^2.3.3"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baelindsay/Employee_Tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baelindsay/Employee_Tracker/issues"
+  },
+  "homepage": "https://github.com/baelindsay/Employee_Tracker#readme"
 }

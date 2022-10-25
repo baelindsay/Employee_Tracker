@@ -1,4 +1,5 @@
 # Employee_Tracker
+A command-line application for managing a business's employees using Node, Inquirer, & MySQL.
 
 ## Description
 A command-line application to manage a company's employee database, using Node.js, Inquirer, and MySQL.

@@ -6,7 +6,7 @@ VALUES  ('Management'),
         ('Styling');
 
 -- ROLE SEEDS -------
-INSERT INTO role (title, salary, department_id)
+INSERT INTO roles (title, salary, department_id)
 VALUES  ('Account manager', 58584, 1),
         ('Stylist', 33463, 4),
         ('Fashion designer', 42017, 2),

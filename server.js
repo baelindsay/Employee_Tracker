@@ -55,3 +55,15 @@ const startApp = () => {
 }
 
 
+const showAll = () => {
+    connection.query(allEmployeeQuery, (err, results) => {
+        if (err) throw err;
+        console.log(' ');
+        console.table('All Employees'), results
+        startApp();
+    })
+
+}
+
+startApp();
+
