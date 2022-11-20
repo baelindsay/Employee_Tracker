@@ -1,20 +1,20 @@
 -- DEPARTMENT SEEDS -----
-INSERT INTO department (department_name)
-VALUES  ('Management'),
-        ('The Fashion Design Department'),
-        ('Product Development'),
-        ('Styling');
+INSERT INTO department (dept_name)
+VALUES  ('Engineering'),
+        ('Finance'),
+        ('Sales'),
+        ('Human Resources');
 
 -- ROLE SEEDS -------
-INSERT INTO roles (title, salary, department_id)
-VALUES  ('Account manager', 58584, 1),
-        ('Stylist', 33463, 4),
-        ('Fashion designer', 42017, 2),
-        ('Quality assurance manager', 69442, 3),
-        ('Sales associate', 31139,4),
-        ('Inventory planner', 57012, 1),
-        ('Creative director', 77774, 2),
-        ('Technical designer', 63874, 3);
+INSERT INTO roles (title, salary, dept_id)
+VALUES  ('Software Engineer', 58584, 1),
+        ('Manager of Engineering', 33463, 1),
+        ('Account Manager', 42017, 2),
+        ('Accountant', 69442, 2),
+        ('Salesperson', 31139,3),
+        ('Sales Lead', 57012, 3),
+        ('HR Manager', 77774, 4),
+        ('HR Person', 63874, 4);
 
 -- EMPLOYEE SEEDS -------
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
