@@ -1,36 +1,18 @@
-USE employee_db;
+SELECT emp_role.id, emp_role.title, departments.dept_name, emp_role.salary
+From departments
+JOIN emp_role ON emp_role.dept_id;
 
-SELECT e.id, e.first_name AS "First Name", e.last_name AS "Last Name", r.title, r.salary FROM employee employee
-JOIN roles r ON r.id;
+SELECT emps.id, emps.first_name, emps.last_name, departments.dept_name, emp_role.salary
+FROM employees
+JOIN emp_role ON emp_role.id = employees.role_id
+Join departments ON departments.id + emp_role.dept_id;
 
-SELECT e.id, e.first_name AS "First Name", e.last_name AS "Last Name", r.title, d.department_name AS "Department", r.salary AS "Salary" FROM employee employee
-INNER JOIN roles r ON r.id = e.role_id INNER JOIN departments d ON d.did = r.department_id;
+INSERT INTO employees (id, first_name, last_name, role_id, manager_id)
+VALUES ()
 
--- ALL EMPLOYEE QUERY ----
-SELECT e.id, e.first_name AS "First Name", e.last_name AS "Last Name", IF NULL(r.title, "No Data") AS "Title", IF NULL (r.salary, 'No Data') AS "Salary", CONCAT(m.first_name, '',m.last_name) AS "Manager"
-FROM employee e
-LEFT JOIN roles r
-ON r.id = e.role_id
-LEFT JOIN department department
-ON d.id = r.department_id
-LEFT JOIN employee m ON m.id = e.manager_id
-ORDER BY e.id;
+SELECT title From emp_role WHERE id=001
 
--- EMPLOYEE BY DEPARTMENT QUERY ----
-SELECT e.first_name AS "First Name", e.last_name AS "Last Name", r.title, d.department_name AS "Department" FROM employee e 
-INNER JOIN roles r ON r.id = e.role_id INNER JOIN deparment d ON d.id = r.department_id WHERE department_name = "Management";
-
-SELECT CONCAT(e.first_name, '', e.last_name) AS full_name, r.title, e.manager_id FROM employee e 
-INNER JOIN roles r ON r.id = e.role_id WHERE e.manager_id = 1;
-
-SELECT * FROM department;
-SELECT * FROM employee;
-SELECT * FROM roles;
-
-DELETE FROM employee WHERE id = 11;
-
-SELECT e.id, e.first_name AS "First Name", e.last_name AS "Last Name", r.title, d.department_name AS "Department", r.salary
-FROM employee e
-INNER JOIN roles r on r.id = e.role_id INNER JOIN deparment d ON d.id = r.department_id
-WHERE department_name = 'The Fashion Design Department';
-
+SELECT A.first_name AS first_name, A.last_name AS last_name, CONCAT(B.first_name, ' ', B.last_name) AS manager
+FROM employees A, employees B
+WHERE A.manager_id = B.id
+OR NULL;
