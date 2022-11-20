@@ -14,5 +14,4 @@ This application allows the user to view and manage the departments, roles, and 
 * MySQL
 * Express.js
 * Node.js
-* npmjs
 * Inquirer
